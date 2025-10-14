@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int N, sum = 0;
+
+    // Read input number
+    scanf("%d", &N);
+
+    // Make sure to work with positive numbers
+    N = (N < 0) ? -N : N;
+
+    // Extract digits and compute sum
+    while (N > 0) {
+        sum += N % 10;  // Add last digit to sum
+        N /= 10;        // Remove last digit
+    }
+
+    // Output the result
+    printf("%d\n", sum);
+
+    return 0;
+}
